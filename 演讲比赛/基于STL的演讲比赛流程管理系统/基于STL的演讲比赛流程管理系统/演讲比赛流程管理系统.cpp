@@ -4,6 +4,9 @@ using namespace std;
 #include"speechManger.h"
 int main()
 {
+	//随机数种子
+	srand((unsigned int)time(NULL));
+
 	//创建管理类对象
 	SpeechManger sm;
 
@@ -28,10 +31,10 @@ int main()
 			system("cls");//清屏操作
 			break;
 		case 2://查看往届比赛记录
-
+			sm.ShowRecord();
 			break;
 		case 3://清空比赛记录
-
+			sm.clearRecord();
 			break;
 		case 0://退出系统
 			sm.exitSystem();

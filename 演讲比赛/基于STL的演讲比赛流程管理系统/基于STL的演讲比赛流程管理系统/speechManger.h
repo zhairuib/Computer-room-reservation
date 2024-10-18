@@ -9,6 +9,8 @@ using namespace std;
 #include<functional>
 #include<numeric>
 #include<string>
+#include<fstream>
+
 //设计演讲管理类
 class SpeechManger
 {
@@ -49,6 +51,21 @@ public:
 	void speechDraw();
 	//比赛
 	void speechContest();
+	//显示得分
+	void showSorce();
+	//保存记录
+	void saveRecord();
+	//显示往届数据
+	void ShowRecord();
+	//读取记录
+	void loadRecord();
+	//判断文件是否为空
+	bool fileIsEmpty;
+
+	map<int, vector<string>>m_Record;
+
+	//清空文件
+	void clearRecord();
 
 
 	//析构函数
